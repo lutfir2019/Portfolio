@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Deskripsi Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Website ini adalah sebuah portofolio yang digunakan untuk menampilkan proyek-proyek yang telah dilakukan. Pengguna dapat mengirimkan pesan melalui formulir kontak untuk memberikan masukan atau pertanyaan.
 
-## Available Scripts
+## Teknologi yang Digunakan
 
-In the project directory, you can run:
+- **Express**: Framework backend untuk membuat server HTTP yang digunakan untuk menangani permintaan dan respon.
+- **Nodemailer**: Modul Node.js untuk mengirim email.
+- **Cors**: Middleware untuk mengaktifkan _Cross-Origin Resource Sharing_ (CORS) pada server, yang memungkinkan akses dari sumber daya di domain yang berbeda.
+- **React**: Library JavaScript untuk membangun antarmuka pengguna (frontend).
+- **Axios**: Library JavaScript untuk melakukan permintaan HTTP dari frontend ke backend.
+- **SweetAlert2**: Library JavaScript untuk menampilkan pesan interaktif yang lebih menarik kepada pengguna.
+- \*\*framer-motion: Library animasi untuk React yang memungkinkan animasi komponen dengan mudah.
 
-### `npm start`
+## Instalasi
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone repositori ini.
+2. Buka terminal dan pindah ke direktori proyek.
+3. Install dependensi dengan menjalankan perintah `npm install`.
+4. Jalankan server backend dengan perintah `node server.js`.
+5. Pada terminal yang berbeda, jalankan aplikasi frontend dengan perintah `npm start`.
+6. Buka browser web Anda dan kunjungi http://localhost:3000 untuk melihat web portfolio.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Pastikan Anda telah menginstal Node.js dan memiliki koneksi internet untuk menjalankan aplikasi ini.
 
-### `npm test`
+## Konfigurasi
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Untuk mengirim email, pastikan Anda melakukan konfigurasi SMTP pada file `server.js` dengan menggunakan informasi akun email yang valid.
 
-### `npm run build`
+## Kontak
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Jika Anda memiliki pertanyaan atau saran, silakan hubungi saya di lutfirrahman2019@gmail.com
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```javascript
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "your-email@gmail.com",
+    pass: "your-email-password",
+  },
+});
+```
